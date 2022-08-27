@@ -10,10 +10,11 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - mvn install
+      - mvn test
   post_build:
     commands:
       - echo Build completed on `date`
+      - mvn package
 artifacts:
   files:
-    - target/sample-aws-codebuild-1.0.jar
+    - target/sample-aws-codebuild-0.0.1-SNAPSHOT.jar
